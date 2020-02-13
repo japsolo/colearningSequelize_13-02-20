@@ -1,0 +1,35 @@
+<%- include('../partials/head')  %>
+	<h1>Crear un producto</h1>
+	<form action="/products/create" method="POST">
+		<div>
+			<label>Nombre:</label><br>
+			<input type="text" name="name">
+			<br><br>
+		</div>
+		<div>
+			<label>Precio:</label><br>
+			<input type="text" name="price">
+			<br><br>
+		</div>
+		<div>
+			<label>Imagen:</label><br>
+			<input type="file" name="image">
+			<br><br>
+		</div>
+		<div>
+			<label>Marca:</label><br>
+			<select name="brandId">
+				<option value="">Elegí una marca</option>
+			</select>
+		</div>
+		<div>
+			<label>Categorías:</label> <br>
+			<select name="categories" multiple>
+				<option value="">Elegí varias categorías</option>
+			</select>
+		</div>
+
+		<br><br>
+		<button type="submit">Guardar</button>
+	</form>
+<%- include('../partials/footer')  %>
