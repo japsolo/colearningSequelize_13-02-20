@@ -1,3 +1,14 @@
 <%- include('../partials/head')  %>
-	<h1>Detalle de: __ </h1>
+	<h1>Detalle de: <%= product.name %></h1>
+	<p>Marca: <%= product.brand.name %> </p>
+	<p>Categorías:</p>
+	<ul>
+		<% product.categories.forEach(oneCategory => { %>
+		<li><%= oneCategory.name %> </li>
+		<% }) %>
+	</ul>
+	<hr>
+	<form action="/products/<%= product.id %>?_method=DELETE" method="POST">
+		<button type="submit">Borrar</button>
+	</form>
 <%- include('../partials/footer')  %>

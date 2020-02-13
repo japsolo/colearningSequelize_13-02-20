@@ -20,12 +20,19 @@
 			<label>Marca:</label><br>
 			<select name="brandId">
 				<option value="">Elegí una marca</option>
+				<% brands.forEach(oneBrand => { %>
+				<option value="<%= oneBrand.id %>"><%= oneBrand.name %> </option>
+				<% }) %>
 			</select>
+			<br><br>
 		</div>
 		<div>
 			<label>Categorías:</label> <br>
 			<select name="categories" multiple>
 				<option value="">Elegí varias categorías</option>
+				<% categories.forEach(oneCategory => { %>
+				<option value="<%= oneCategory.id %>"><%= oneCategory.name %> </option>
+				<% }) %>
 			</select>
 		</div>
 

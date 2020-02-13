@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 /*====== Controller ======*/ 
-const controller = require('../controllers/moviesController');
+const controller = require('../controllers/productsController');
 
 // Listado - GET
 router.get('/', controller.index);
